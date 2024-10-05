@@ -409,15 +409,15 @@ button:hover {
 }
 
 .card-body {
-    color: #000;
+    color: #fff;
 }
 
 .card-body .card-title {
-    color: #000;
+    color: #fff;
 }
 
 .card-body .card-text {
-    color: #000;
+    color: #fff;
 }
 
 .card-body .btn-primary {
