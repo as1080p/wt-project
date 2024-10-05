@@ -1,0 +1,565 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px; /* Adjust this value based on your navbar height */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+header {
+    background-color: #111;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #ff9933;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9933;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 80px;
+    position: relative;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+#background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    opacity: 0.5;
+}
+
+.search-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.search-section h2 {
+    font-size: 2.5rem;
+    color: #ff9933;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#movie-search {
+    flex-grow: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff9933;
+    color: #000;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+.favorite-actors, .about-us {
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.favorite-actors h3, .about-us h3 {
+    font-size: 1.8rem;
+    color: #ff9933;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.actor-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.actor-card {
+    text-align: center;
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.actor-card:hover {
+    transform: translateY(-5px);
+}
+
+.actor-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.actor-card h4 {
+    font-size: 1rem;
+    color: #ff9933;
+}
+
+.about-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-images img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 1024px) {
+    .actor-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    #movie-search, button {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+
+    .actor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .about-images {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .actor-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff9933;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    color: #ff9933;
+    margin-bottom: 20px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+.modal button {
+    background-color: #ff9933;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #e68a00;
+}
+
+/* Add these styles for the navbar */
+.navbar {
+    transition: all 0.3s ease;
+    background-color: #000 !important; /* Override Bootstrap's background */
+}
+
+.navbar-brand h1 {
+    color: #ff9933 !important; /* Orange color */
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ff9933 !important; /* Orange color */
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    opacity: 0.8;
+}
+
+.navbar-toggler {
+    border-color: #ff9933 !important; /* Orange color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 153, 51, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.movie-result {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.movie-result h2 {
+    color: #ff9933;
+    margin-bottom: 10px;
+}
+
+.movie-result img {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.movie-result p {
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color: #ff4444;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Add this to your existing styles */
+.navbar-nav .nav-link.active {
+    color: #ff9933 !important;
+    font-weight: bold;
+}
+
+.card-body {
+    color: #000;
+}
+
+.card-body .card-title {
+    color: #000;
+}
+
+.card-body .card-text {
+    color: #000;
+}
+
+.card-body .btn-primary {
+    color: #fff; /* Keep the button text white */
+    background-color: #007bff; /* Keep the default Bootstrap primary button color */
+}
+
+/* Add these styles to your existing CSS */
+.card {
+    background-color: #222;
+    color: #fff;
+}
+
+.card-title {
+    color: #ff9933;
+}
+
+.card-subtitle {
+    color: #aaa;
+}
+
+.card-body .btn-primary {
+    background-color: #ff9933;
+    border-color: #ff9933;
+    color: #000;
+}
+
+.card-body .btn-primary:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+}
+
+.card-body ul {
+    padding-left: 20px;
+}
+
+.card-body ul li {
+    margin-bottom: 5px;
+}
+
+/* Styles for directors.html */
+
+.director-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.director-card {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-5px);
+}
+
+.director-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.director-card h4 {
+    color: #ff9933;
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+    padding: 0 1rem;
+}
+
+.director-card p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.director-spotlight {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.director-spotlight img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.director-spotlight .card-body {
+    padding: 2rem;
+}
+
+.director-spotlight .card-title {
+    color: #ff9933;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.director-spotlight .card-subtitle {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.director-spotlight .card-text {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.director-spotlight ul {
+    color: #fff;
+    padding-left: 1.5rem;
+}
+
+.director-spotlight .btn-primary {
+    background-color: #ff9933;
+    border-color: #ff9933;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.director-spotlight .btn-primary:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+}
+
+@media (max-width: 768px) {
+    .director-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .director-card img {
+        height: 200px;
+    }
+
+    .director-spotlight .card-body {
+        padding: 1.5rem;
+    }
+}

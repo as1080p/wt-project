@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directors - MovieMania</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1 class="m-0">MovieMania</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="actors.html">Actors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directors.html">Directors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="loginBtn">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="signupBtn">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Indian Film Directors</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="director-grid">
+                    <!-- Existing Bollywood Directors -->
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/8pMOQy2D4-ScmtX2VEocOGpdJLtZBjdo1T905Q5hL9k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/cHYtdGFyZ2V0LWlt/YWdlcy9lZTNjNTM3/NTk4MDY4YTYwYWIw/ZjBkOWYxMTBmYzI3/NzEzYTJmNDcxNjVj/ZTBlNTRhNjZhZGRm/MzEzNGMzMWVlLmpw/Zw" alt="Rajkumar Hirani">
+                        <h4>Rajkumar Hirani</h4>
+                        <p>Known for: 3 Idiots, PK</p>
+                    </div>
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/ZKKZEcYiKI1VVcv6kdZm-dH2u4X5mm7_ONNbk8f4ffo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50aGVtb3ZpZWRi/Lm9yZy90L3AvdzMw/MF9hbmRfaDQ1MF9i/ZXN0djIvYVExVEZN/TEN2ZW1nYmZINUJr/SXdmZzIwbWY0Lmpw/Zw" alt="Sanjay Leela Bhansali">
+                        <h4>Sanjay Leela Bhansali</h4>
+                        <p>Known for: Devdas, Padmaavat</p>
+                    </div>
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/VTRZLIxagt78rqPMrRYsH9J2LkDLwoS6o_I2nlGx6Bo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDUxODE3/NjAuanBn" alt="Anurag Kashyap">
+                        <h4>Anurag Kashyap</h4>
+                        <p>Known for: Gangs of Wasseypur, Dev.D</p>
+                    </div>
+                    
+                    <!-- South Indian Directors -->
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/wMHQGGPyO1NFhbV-yCWXFLBVrYaHc4g_jovreas_mSM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2MxL1NTX1JhamFt/b3VsaSxfMjAyMS5q/cGc" alt="S.S. Rajamouli">
+                        <h4>S.S. Rajamouli</h4>
+                        <p>Known for: Baahubali, RRR</p>
+                    </div>
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/D2METtPf2NBHtU5zzDT2l1aqjL68SaoOVZFdCY0oK74/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbS5p/bmRpYXRpbWVzLmlu/L2NvbnRlbnQvMjAy/My9NYXkvMDAwXzMy/SzI3NkVfNjQ1MjNi/YjljZDBmNi5qcGc_/dz0xMjAwJmg9OTAw/JmNjPTEmd2VicD0x/JnE9NzU" alt="Mani Ratnam">
+                        <h4>Mani Ratnam</h4>
+                        <p>Known for: Roja, Bombay</p>
+                    </div>
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/EBY0M-FD7dhUXG5pwuphkaqh8qOizFh0Z-KlzxAr40U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk16YzJOV05o/WVdFdFlUaGhZaTAw/WWprMUxUZ3pNVFl0/TVRnMVpqUXhaVEl4/TlRObVhrRXlYa0Zx/Y0djQC5qcGc" alt="Shankar">
+                        <h4>Shankar</h4>
+                        <p>Known for: Enthiran, 2.0</p>
+                    </div>
+                    <div class="director-card">
+                        <img src="https://imgs.search.brave.com/a1eTJN4AgTVXwRJpZ1uJO5MEBQtnjE7U8094tKtmXdk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1QlpUazJPVEk0/TnpZdE1qUXpaUzAw/Tmpsa0xXSmtObVF0/WWpjMU1UVTFPV05o/WkRaalhrRXlYa0Zx/Y0djQC5qcGc" alt="Gautham Vasudev Menon">
+                        <h4>Gautham Vasudev Menon</h4>
+                        <p>Known for: Vinnaithaandi Varuvaayaa, Vaaranam Aayiram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center my-5">Director Spotlight</h2>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://imgs.search.brave.com/xNhH_l12vIwrsqXGElyz8f7rDbRypwWrC3S2PaJxwmE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzQ0L1Jhamt1bWFy/X0hpcmFuaV8yMDE0/LmpwZw" class="img-fluid rounded-start" alt="Rajkumar Hirani">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Rajkumar Hirani</h3>
+                                <h6 class="card-subtitle mb-2 text-muted">Master of Social Commentary</h6>
+                                <p class="card-text">Rajkumar Hirani is an Indian film director and editor. He is widely regarded as one of the most successful and influential filmmakers in Indian cinema, known for his ability to blend humor with social messages.</p>
+                                <p class="card-text"><strong>Born:</strong> November 20, 1962 in Nagpur, Maharashtra, India</p>
+                                <p class="card-text"><strong>Notable Films:</strong></p>
+                                <ul>
+                                    <li>Munna Bhai M.B.B.S. (2003)</li>
+                                    <li>3 Idiots (2009)</li>
+                                    <li>PK (2014)</li>
+                                    <li>Sanju (2018)</li>
+                                </ul>
+                                <p class="card-text"><strong>Awards:</strong> 5 National Film Awards, 6 Filmfare Awards</p>
+                                <a href="https://en.wikipedia.org/wiki/Rajkumar_Hirani" target="_blank" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
